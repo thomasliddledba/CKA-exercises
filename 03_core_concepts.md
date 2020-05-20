@@ -6,9 +6,12 @@ All the Kubernetes API reference is [here](https://kubernetes.io/docs/reference/
 All the kubectl commands reference is [here](https://v1-14.docs.kubernetes.io/docs/reference/generated/kubectl/kubectl-commands).
 
 ### Create a static pod named static-busybox that uses the busybox image and the command sleep 1000
+<details><summary>show</summary>
+<p>
 ```bash
 kubectl run --restart=Never --image=busybox static-busybox --dry-run -o yaml --command -- sleep 1000 > /etc/kubernetes/manifests/static-busybox.yaml
 ```
+</p></details>
 
 ### Use JSON PATH query to retrieve the osImages of all the nodes and store it in a file /opt/outputs/nodes_os_x43kj56.txt
 <details><summary>show</summary>
@@ -16,7 +19,7 @@ kubectl run --restart=Never --image=busybox static-busybox --dry-run -o yaml --c
 ```bash
 kubectl get nodes -o jsonpath='{.items[*].status.nodeInfo.osImage}' > /opt/outputs/nodes_os_x43kj56.txt
 ```
-</p></detail>
+</p></details>
 
 
 ### Create an NGINX Pod
