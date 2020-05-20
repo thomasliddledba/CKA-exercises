@@ -39,7 +39,7 @@ kubectl run nginx --generator=run-pod/v1 --image=nginx
 <p>
 
 ```bash
-kubectl run nginx --generator=run-pod/v1 --image=nginx --dry-run -o yaml > nginx.yaml
+kubectl run nginx --image=nginx --dry-run=client -o yaml > nginx.yaml
 ```
 
 </p>
