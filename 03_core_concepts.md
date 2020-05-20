@@ -50,7 +50,7 @@ kubectl run nginx --image=nginx --dry-run=client -o yaml > nginx.yaml
 <p>
 
 ```bash
-kubectl create deployment nginx --image=nginx --dry-run -o yaml > nginx-deployment.yaml
+kubectl create deployment nginx --image=nginx --dry-run=client -o yaml > nginx-deployment.yaml
 ```
 Open the nginx-deployment.yaml file that is created and modify replicas: 4
     
